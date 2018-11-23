@@ -28,7 +28,7 @@ var newMap = L.map('map').setView([36.9188702,-97.0708398], 4);
 $.getJSON("https://raw.githubusercontent.com/DougGreenfield/nyemap/master/nye.geojson",function(data){
 //L.geoJson function is used to parse geojson file and load on to map
     var ratIcon = L.icon({
-      iconUrl: 'DougGreenfield.github.io/SVG/Acorn.svg',
+      iconUrl: 'https://github.com/DougGreenfield/nyemap/tree/master/SVG/Acorn.svg',
       iconSize: [60,50]
     });
     L.geoJson(data,{
