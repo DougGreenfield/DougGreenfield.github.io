@@ -27,13 +27,14 @@ var newMap = L.map('map').setView([36.9188702,-97.0708398], 4);
 // loading GeoJSON file 
 $.getJSON("https://raw.githubusercontent.com/DougGreenfield/nyemap/master/nye.geojson",function(data){
 //L.geoJson function is used to parse geojson file and load on to map
-    var ratIcon = L.icon({
-      iconUrl: 'DougGreenfield.github.io/SVG/Acorn.svg',
-      iconSize: [60,50]
-    });
+    
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-        var marker = L.marker(latlng,{icon: ratIcon});
+	      var objIcon = L.icon({
+      iconUrl: 'DougGreenfield.github.io/SVG/Acorn.svg',
+      iconSize: [40,40]
+    });
+        var marker = L.marker(latlng,{icon: objIcon});
         marker.bindPopup(feature.properties.NAME + ', ' + feature.properties.ST+ '<br/>' + feature.properties.Object);
         return marker;
       }
