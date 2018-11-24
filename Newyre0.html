@@ -31,7 +31,7 @@ $.getJSON("https://raw.githubusercontent.com/DougGreenfield/nyemap/master/nye.ge
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
 	      var objIcon = L.icon({
-      iconUrl: 'SVG/' + feature.properties.Object +'.svg',
+      iconUrl: 'SVG/' + feature.properties.Object +'.svg?sanitize=true',
       iconSize: [40,40]
     });
         var marker = L.marker(latlng,{icon: objIcon});
