@@ -135,7 +135,7 @@
 { "type": "Feature", "properties": { "NAME": "Beavertown", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Beaver" }, "geometry": { "type": "Point", "coordinates": [ -77.167533642970724, 40.754625940625829 ] } },
 { "type": "Feature", "properties": { "NAME": "Blain", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Cow" }, "geometry": { "type": "Point", "coordinates": [ -77.510509152351105, 40.336516570525355 ] } },
 { "type": "Feature", "properties": { "NAME": "Cleona", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Pretzel" }, "geometry": { "type": "Point", "coordinates": [ -76.488639699471165, 40.334482585866006 ] } },
-{ "type": "Feature", "properties": { "NAME": "Cornwall", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Canonball" }, "geometry": { "type": "Point", "coordinates": [ -76.395133551643355, 40.253623814070771 ] } },
+{ "type": "Feature", "properties": { "NAME": "Cornwall", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Cannonball" }, "geometry": { "type": "Point", "coordinates": [ -76.395133551643355, 40.253623814070771 ] } },
 { "type": "Feature", "properties": { "NAME": "Dillsburg", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Pickle" }, "geometry": { "type": "Point", "coordinates": [ -77.037588023217523, 40.104907501206377 ] } },
 { "type": "Feature", "properties": { "NAME": "Falmouth", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Goat" }, "geometry": { "type": "Point", "coordinates": [ -76.713453879234962, 40.125628640798816 ] } },
 { "type": "Feature", "properties": { "NAME": "Halifax", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Tree" }, "geometry": { "type": "Point", "coordinates": [ -76.929405828587434, 40.468091184052774 ] } },
