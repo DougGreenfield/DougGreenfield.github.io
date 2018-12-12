@@ -10,7 +10,7 @@ a basemap from CARTO.
 
 #### Notes about the data on the map
 
-The Wikipedia page that was the source for this map is subject to changes at any time and may have already changed since this map was created.  Some of the items listed on that page were either one time events of have been discontinued,
+The Wikipedia page that was the source for this map is subject to changes at any time and may have already changed since this map was created.  Some of the items listed on that page were either one time events or have been discontinued,
 these were not included on the map.  There are two locations outside of the United States (Bermuda and Canada) that were not included but may be added at a later time. There is an obvious Pennsylvania bias in the results as much of this came from an article in [Penn Live](https://www.pennlive.com/entertainment/index.ssf/2016/12/new_years_eve_2016_strange_qui.html) - this is also where I first saw some of these and got the idea for the map. See map notes below for how this was handled cartographically.
 
 #### Mapping Notes
