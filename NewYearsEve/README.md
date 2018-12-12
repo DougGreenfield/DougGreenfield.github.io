@@ -4,9 +4,7 @@ I made it based on [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_o
 There is a static map (nye.jpeg) and an interactive version (newyre.html)
 
 The static map was made mostly using QGIS, the interactive map is via Leaflet using
-a basemap from CARTO.
-
-
+a basemap from CARTO. **Beware** - Sometimes the interactive map does not load all points on the first try. If only a few appear, refresh the page.
 
 ### Notes about the data on the map
 
