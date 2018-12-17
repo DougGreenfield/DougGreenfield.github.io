@@ -1,7 +1,7 @@
 # Map - What They Drop on New Year's Eve
 This is a map of objects that are dropped on New Year's Eve.
 I made it based on [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_objects_dropped_on_New_Year%27s_Eve)
-There is a static map (nye.jpeg) and an interactive version (newyre.html)
+There is a [static map] (https://github.com/DougGreenfield/DougGreenfield.github.io/blob/master/NewYearsEve/NYE.jpg) and an [interactive version] (https://douggreenfield.github.io/NewYearsEve/Newyre.html)
 
 The static map was made mostly using QGIS, the interactive map is via Leaflet using
 a basemap from CARTO.          
@@ -13,6 +13,6 @@ The Wikipedia page that was the source for this map is subject to changes at any
 
 ### Mapping Notes
 
-The locations are from a canned US cities dataset and are not accurate when zoomed in too far. The locations reference cities or towns and are not meant to represent the locations of the drop events. In some cases they may be several miles away. The Key West locations were moved slightly so both objects would be readable. There are (at this time, December, 2018) no objects listed in Alaska or Hawaii. This allowed me to zoom the map in and not need the inset maps commonly seen for these states. Instead, I was able to use those spaces for Pennsylvania, which has such dense data that it needed two separate insets, one just focused on Harrisburg. A couple of other areas, particularly northern Georgia are also very dense. The interactive version was created for this problem.
+The locations are from a canned US cities dataset and are not accurate when zoomed in too far. The locations reference cities or towns and are not meant to represent precise locations of the places or the drop events. In some cases they may be several miles away. The Key West locations were moved slightly so both objects would be readable. There are (at this time, December, 2018) no objects listed in Alaska or Hawaii. This allowed me to zoom the map in and not need the inset maps commonly seen for these states. Instead, I was able to use those spaces for Pennsylvania, which has such dense data that it needed two separate insets, one just focused on Harrisburg. A couple of other areas, particularly northern Georgia are also very dense. The interactive version was created for this problem.
 
 
