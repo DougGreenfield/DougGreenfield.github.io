@@ -1,7 +1,7 @@
 # Map - What They Drop on New Year's Eve
 This is a map of objects that are dropped on New Year's Eve.
 I made it based on [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_objects_dropped_on_New_Year%27s_Eve)
-There is a [static map] (https://github.com/DougGreenfield/DougGreenfield.github.io/blob/master/NewYearsEve/NYE.jpg) and an [interactive version] (https://douggreenfield.github.io/NewYearsEve/Newyre.html)
+There is a [static map](https://github.com/DougGreenfield/DougGreenfield.github.io/blob/master/NewYearsEve/NYE.jpg) and an [interactive version](https://douggreenfield.github.io/NewYearsEve/Newyre.html)
 
 The static map was made mostly using QGIS, the interactive map is via Leaflet using
 a basemap from CARTO.          
