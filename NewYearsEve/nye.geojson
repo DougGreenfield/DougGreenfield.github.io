@@ -148,6 +148,7 @@
 { "type": "Feature", "properties": { "NAME": "Marysville", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Bridge" }, "geometry": { "type": "Point", "coordinates": [ -76.931524453864569, 40.341106564834085 ] } },
 { "type": "Feature", "properties": { "NAME": "Manheim", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Ball" }, "geometry": { "type": "Point", "coordinates": [ -76.395137430951493, 40.164074666000296 ] } },
 { "type": "Feature", "properties": { "NAME": "Media", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Ball" }, "geometry": { "type": "Point", "coordinates": [ -75.388149533284107, 39.918133576437675 ] } },
+{ "type": "Feature", "properties": { "NAME": "Kennett Square", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Mushroom" }, "geometry": { "type": "Point", "coordinates": [ -75.711778, 39.846775 ] } },
 { "type": "Feature", "properties": { "NAME": "Middletown", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Sphoctogon" }, "geometry": { "type": "Point", "coordinates": [ -76.731307681855199, 40.195102837516323 ] } },
 { "type": "Feature", "properties": { "NAME": "Mechanicsburg", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Wrench" }, "geometry": { "type": "Point", "coordinates": [ -77.007134801651048, 40.212234956758302 ] } },
 { "type": "Feature", "properties": { "NAME": "McClure", "ST": "PA", "POP_CLASS": 0, "POP2010": 0, "Object": "Kettle" }, "geometry": { "type": "Point", "coordinates": [ -77.312300675648785, 40.706531567755668 ] } },
