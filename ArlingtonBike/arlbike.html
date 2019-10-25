@@ -1,0 +1,78 @@
+<html>
+<head>
+  <title>Arlington Bicycle Map</title>
+  <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script> 
+    <script src="leaflet-providers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+      #map{ height: 100%}
+  </style>
+</head>
+<body>
+<div id="header" style="position:absolute;z-index:10;margin-left:40px;margin-top:2px;background-color:#eee;padding:4px;opacity:0.5;"><span><b><font size="26">Arlington Bicycling Infrastructure&nbsp;</font></b></span><br/></div>
+<div id="map" style="z-index:0;"></div>
+    
+  <script>
+  var map = L.map('map').setView([42.421,-71.17], 14);
+       
+L.tileLayer.provider('MapBox', {
+    id: 'mapbox.dark',
+    accessToken: 'pk.eyJ1IjoiZG91Z2ciLCJhIjoiNVJjTjlxRSJ9.GCoXzuL5P0ly6jHXTC4NEQ',
+    opacity: 0.9
+    
+}).addTo(map);
+      
+      
+      // load geoJSON - get background first
+      
+      $.getJSON("https://raw.githubusercontent.com/NewtonMAGIS/GISData/master/Massachusetts%20Town%20Boundaries/MassTowns.geojson", function(data){
+          L.geoJson(data, {filter: function(feature, layer){
+                return feature.properties.TOWN !== "ARLINGTON"
+               
+         // return feature.properties.TOWN !== "NEWTON", {color: "#999", weight: 1, fillcolor: "#666", fillOpacity: .2}
+          //    
+          }, color: "#111", weight: 1, fillColor: "#fff", fillOpacity: .5   
+               
+      }).addTo(map);
+          });
+      
+      //cycling info
+      $.getJSON("Markings.geojson", function(data){
+          
+      L.geoJSON(data, {
+    style: function (feature) {
+        switch(feature.properties.TYPE){
+            case "Bikeway":
+                return {color: "#0050ec", weight: 5};
+                break;
+            case "Lane":
+                return {color: "#1c1", weight: 2};
+                break;
+            case "Sharrow":
+                return {color: "#f49d31", weight: 1.5};
+                break;
+            default:
+                return {color: "#aaa", weight: 0};
+                break;
+                
+                
+        }
+    }
+    }).addTo(map);
+          
+          
+   // style: myStyle  
+});
+
+
+      
+      
+      
+    
+      
+  </script>
+      
+ </body>
+</html>
