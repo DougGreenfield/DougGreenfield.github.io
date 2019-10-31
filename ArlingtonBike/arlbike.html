@@ -46,10 +46,10 @@ L.tileLayer.provider('MapBox', {
     style: function (feature) {
         switch(feature.properties.TYPE){
             case "Lane":
-                return {color: "#f21212", weight: 3};
+                return {color: "#3471d8", weight: 3};
                 break;
             case "Sharrow":
-                return {color: "#f49d31", weight: 2};
+                return {color: "#34d4d8", weight: 2};
                 break;        
                 
         }
@@ -67,13 +67,13 @@ L.tileLayer.provider('MapBox', {
                 style: function(feature) {
         switch(feature.properties.NAME){
             case "Minuteman Bikeway":
-                return {color: "#0050ec", weight: 5};
+                return {color: "#07bf40", weight: 5};
                 break;
             case "Alewife Brook Greenway":
-                return {color: "#1c1", weight: 4};
+                return {color: "#07bf40", weight: 4};
                 break;
             default:
-                return {color: "#6bd2f0", weight: 4};
+                return {color: "#7abf6e", weight: 4};
                 break;        
                 
         }},
