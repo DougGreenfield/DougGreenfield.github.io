@@ -15,7 +15,7 @@
 { "type": "Feature", "properties": { "Name": "Town Hall", "Type": "Municipal" }, "geometry": { "type": "Point", "coordinates": [ -71.156442041947102, 42.415665428896126 ] } },
 { "type": "Feature", "properties": { "Name": "Robbins Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.155020493213186, 42.415618176002454 ] } },
 { "type": "Feature", "properties": { "Name": "Fox Branch Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.141628046180145, 42.405622417307143 ] } },
-{ "type": "Feature", "properties": { "Name": "Arlington Center for the Arts", "Type": "Other" }, "geometry": { "type": "Point", "coordinates": [ -71.157346060998833, 42.414421400871959 ] } },
+{ "type": "Feature", "properties": { "Name": "Arlington Center for the Arts", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.157346060998833, 42.414421400871959 ] } },
 { "type": "Feature", "properties": { "Name": "Schwamb Mill", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.177924651432804, 42.42500507320333 ] } },
 { "type": "Feature", "properties": { "Name": "Whittemore Robbins House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.155314287813724, 42.414952534296766 ] } },
 { "type": "Feature", "properties": { "Name": "Jefferson Cutter House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.152350433269604, 42.415717646597294 ] } },
