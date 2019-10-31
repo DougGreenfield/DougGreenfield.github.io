@@ -111,45 +111,19 @@ L.tileLayer.provider('MapBox', {
     var symb = 'museum'
      L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-       /**  switch (feature.properties.Type) {
-                  case "School":
-                  return "school";
-                  break;
-                  
-                                         } **/
+       
 	      var objIcon = L.icon({
       iconUrl: 'svg/' + feature.properties.Type +'.svg',
       iconSize: [18,18]
     });
         var marker = L.marker(latlng,{icon: objIcon});
-       // marker.bindPopup(feature.properties.NAME + ', ' + feature.properties.ST+ '<br/>' + feature.properties.Object);
+       marker.bindPopup(feature.properties.Name);
         return marker;
       }
         
     }).addTo(map);
     
-   /** L.geoJson(data,{
-      pointToLayer: function(feature,latlng){
-	      var objIcon = L.icon({
-      //iconUrl: 'SVG/' + feature.properties.Object +'.svg',
-              
-             
-          switch (feature.properties.Type) {
-                  case "School":
-              //  return {iconUrl: 'svg/school.svg'};
-               return{symb: "school"};
-                  break;
-            },
-              
-    iconUrl: 'svg/'+symb+'.svg',
-      iconSize: [18,18]
-    });
-        var marker = L.marker(latlng,{icon: objIcon});
-     //   marker.bindPopup(feature.properties.NAME + ', ' + feature.properties.ST+ '<br/>' + feature.properties.Object);
-        return marker;
-      }
-        
-    }).addTo(map); **/
+   
 });     
       
     
