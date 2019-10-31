@@ -113,7 +113,7 @@ L.tileLayer.provider('MapBox', {
       pointToLayer: function(feature,latlng){
        
 	      var objIcon = L.icon({
-      iconUrl: 'svg/' + feature.properties.Type +'.svg',
+      iconUrl: 'svg/' + feature.properties.Type +'1.svg',
       iconSize: [18,18]
     });
         var marker = L.marker(latlng,{icon: objIcon});
