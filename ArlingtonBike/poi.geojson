@@ -16,11 +16,12 @@
 { "type": "Feature", "properties": { "Name": "Robbins Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.155020493213186, 42.415618176002454 ] } },
 { "type": "Feature", "properties": { "Name": "Fox Branch Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.141628046180145, 42.405622417307143 ] } },
 { "type": "Feature", "properties": { "Name": "Arlington Center for the Arts", "Type": "Other" }, "geometry": { "type": "Point", "coordinates": [ -71.157346060998833, 42.414421400871959 ] } },
-{ "type": "Feature", "properties": { "Name": "Schwamb Mill", "Type": "Historic S" }, "geometry": { "type": "Point", "coordinates": [ -71.177924651432804, 42.42500507320333 ] } },
-{ "type": "Feature", "properties": { "Name": "Whittemore Robbins House", "Type": "Historic S" }, "geometry": { "type": "Point", "coordinates": [ -71.155314287813724, 42.414952534296766 ] } },
-{ "type": "Feature", "properties": { "Name": "Jefferson Cutter House", "Type": "Historic S" }, "geometry": { "type": "Point", "coordinates": [ -71.152350433269604, 42.415717646597294 ] } },
-{ "type": "Feature", "properties": { "Name": "Bike Stop", "Type": "Bike Shop" }, "geometry": { "type": "Point", "coordinates": [ -71.166797413346458, 42.420860458186596 ] } },
-{ "type": "Feature", "properties": { "Name": "Quadcycles", "Type": "Bike Shop" }, "geometry": { "type": "Point", "coordinates": [ -71.168987584766981, 42.420620659293725 ] } },
-{ "type": "Feature", "properties": { "Name": "Gibbs School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.14528239216304, 42.410524434854509 ] } }
+{ "type": "Feature", "properties": { "Name": "Schwamb Mill", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.177924651432804, 42.42500507320333 ] } },
+{ "type": "Feature", "properties": { "Name": "Whittemore Robbins House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.155314287813724, 42.414952534296766 ] } },
+{ "type": "Feature", "properties": { "Name": "Jefferson Cutter House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.152350433269604, 42.415717646597294 ] } },
+{ "type": "Feature", "properties": { "Name": "Bike Stop", "Type": "Bikeshop" }, "geometry": { "type": "Point", "coordinates": [ -71.166797413346458, 42.420860458186596 ] } },
+{ "type": "Feature", "properties": { "Name": "Quadcycles", "Type": "Bikeshop" }, "geometry": { "type": "Point", "coordinates": [ -71.168987584766981, 42.420620659293725 ] } },
+{ "type": "Feature", "properties": { "Name": "Gibbs School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.14528239216304, 42.410524434854509 ] } },
+{ "type": "Feature", "properties": { "Name": "Alewife Station", "Type": "Transit" }, "geometry": { "type": "Point", "coordinates": [ -71.141815730894635, 42.395600063909392 ] } }
 ]
 }
