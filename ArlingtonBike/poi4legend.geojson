@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "poi",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Arlington High School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.161636025379337, 42.418368399542771 ] } },
+{ "type": "Feature", "properties": { "Name": "Ottoson Middle School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.175608714320319, 42.421063953301967 ] } },
+{ "type": "Feature", "properties": { "Name": "Peirce School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.17809433601461, 42.428725155179777 ] } },
+{ "type": "Feature", "properties": { "Name": "Dallin School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.187711497905426, 42.417743319042629 ] } },
+{ "type": "Feature", "properties": { "Name": "Brackett School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.176522904198066, 42.412541508157453 ] } },
+{ "type": "Feature", "properties": { "Name": "Hardy School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.145232393762484, 42.404397289878169 ] } },
+{ "type": "Feature", "properties": { "Name": "Thompson School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.138457394129873, 42.411876401170588 ] } },
+{ "type": "Feature", "properties": { "Name": "Bishop School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.154972488077078, 42.424411809987859 ] } },
+{ "type": "Feature", "properties": { "Name": "Stratton School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.167037009942447, 42.428682958908645 ] } },
+{ "type": "Feature", "properties": { "Name": "Town Hall", "Type": "Municipal" }, "geometry": { "type": "Point", "coordinates": [ -71.166966112642967, 42.425509040335371 ] } },
+{ "type": "Feature", "properties": { "Name": "Robbins Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.166982351644705, 42.427546787126985 ] } },
+{ "type": "Feature", "properties": { "Name": "Fox Branch Library", "Type": "Library" }, "geometry": { "type": "Point", "coordinates": [ -71.141628046180145, 42.405622417307143 ] } },
+{ "type": "Feature", "properties": { "Name": "Arlington Center for the Arts", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.166963571425157, 42.426495094832667 ] } },
+{ "type": "Feature", "properties": { "Name": "Schwamb Mill", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.177924651432804, 42.42500507320333 ] } },
+{ "type": "Feature", "properties": { "Name": "Whittemore Robbins House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.155314287813724, 42.414952534296766 ] } },
+{ "type": "Feature", "properties": { "Name": "Jefferson Cutter House", "Type": "Historic" }, "geometry": { "type": "Point", "coordinates": [ -71.152350433269604, 42.415717646597294 ] } },
+{ "type": "Feature", "properties": { "Name": "Bike Stop", "Type": "Bikeshop" }, "geometry": { "type": "Point", "coordinates": [ -71.167051150468751, 42.429603004233535 ] } },
+{ "type": "Feature", "properties": { "Name": "Quadcycles", "Type": "Bikeshop" }, "geometry": { "type": "Point", "coordinates": [ -71.168987584766981, 42.420620659293725 ] } },
+{ "type": "Feature", "properties": { "Name": "Gibbs School", "Type": "School" }, "geometry": { "type": "Point", "coordinates": [ -71.14528239216304, 42.410524434854509 ] } },
+{ "type": "Feature", "properties": { "Name": "Alewife Station", "Type": "Transit" }, "geometry": { "type": "Point", "coordinates": [ -71.166926010986074, 42.424260248707249 ] } }
+]
+}

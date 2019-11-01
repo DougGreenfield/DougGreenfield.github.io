@@ -12,10 +12,11 @@
 </head>
 <body>
 <div id="header" style="position:absolute;z-index:10;margin-left:40px;margin-top:2px;background-color:#eee;padding:4px;opacity:0.5;"><span><b><font size="26">Arlington Bicycling Infrastructure&nbsp;</font></b></span><br/></div>
-<div id="map" style="z-index:0;"></div>
+<div id="map" style="z-index:0;"></div><div id="legend" style="position:fixed;z-index:10;margin-left:40px;bottom:20px;background-color:#eee;padding:4px;"><span><image src="yes.jpeg"></image></span><br/></div> 
+    
     
   <script>
-  var map = L.map('map').setView([42.421,-71.17], 14);
+  var map = L.map('map').setView([42.419,-71.155], 14);
        
 L.tileLayer.provider('MapBox', {
     id: 'mapbox.streets',
@@ -30,7 +31,7 @@ L.tileLayer.provider('MapBox', {
     $.getJSON("https://raw.githubusercontent.com/DougGreenfield/DougGreenfield.github.io/master/ArlingtonBike/MassBk.geojson", function(data){
           L.geoJson(data, {
               style: function(feature) {
-                return {color: "#111", weight: 1, fillColor: "#111", fillOpacity: .2} }
+                return {color: "#555", weight: 0.4, fillColor: "#111", fillOpacity: .2} }
                
          // return feature.properties.TOWN !== "NEWTON", {color: "#999", weight: 1, fillcolor: "#666", fillOpacity: .2}
           //    
@@ -114,7 +115,7 @@ L.tileLayer.provider('MapBox', {
        
 	      var objIcon = L.icon({
       iconUrl: 'svg/' + feature.properties.Type +'1.svg',
-      iconSize: [18,18]
+      iconSize: [20,20]
     });
         var marker = L.marker(latlng,{icon: objIcon});
        marker.bindPopup(feature.properties.Name);
