@@ -82,7 +82,9 @@ L.tileLayer.provider('MapBox', {
           return feature.properties.FEATTYPE === "Trail";
     },
                
-      }).addTo(map);
+      }).bindPopup(function (layer) {
+    return layer.feature.properties.NAME;
+}).addTo(map);
     })
     
    //Boardwalks   
