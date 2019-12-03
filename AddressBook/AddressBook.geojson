@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"name": "AddressBook",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Address": "410 Hudson St", "City": "Albany", "State": "NY", "osm_id": "370696501", "latlong": "42.6478495,-73.7526497" }, "geometry": { "type": "Point", "coordinates": [ -73.7526497, 42.6478495 ] } },
+{ "type": "Feature", "properties": { "Address": "892 Mercer St", "City": "Albany", "State": "NY", "osm_id": "5569923", "latlong": "42.6623247988855,-73.7952711350849" }, "geometry": { "type": "Point", "coordinates": [ -73.795271135084903, 42.6623247988855 ] } },
+{ "type": "Feature", "properties": { "Address": "830-32 Lancaster Ave", "City": "Bryn Mawr", "State": "PA", "osm_id": "724628650", "latlong": "40.014327,-75.3038417" }, "geometry": { "type": "Point", "coordinates": [ -75.3038417, 40.014327 ] } },
+{ "type": "Feature", "properties": { "Address": "1807 Spruce St", "City": "Philadelphia", "State": "PA", "osm_id": "340439822", "latlong": "39.9480163,-75.1714734701304" }, "geometry": { "type": "Point", "coordinates": [ -75.171473470130394, 39.9480163 ] } },
+{ "type": "Feature", "properties": { "Address": "929 Mississippi St.", "City": "Lawrence", "State": "KS", "osm_id": "219517639", "latlong": "38.96638525,-95.24435505" }, "geometry": { "type": "Point", "coordinates": [ -95.24435505, 38.96638525 ] } },
+{ "type": "Feature", "properties": { "Address": "1011 Ravenna Blvd", "City": "Seattle", "State": "WA", "osm_id": "150932456", "latlong": "47.6756537,-122.2976262" }, "geometry": { "type": "Point", "coordinates": [ -122.316327304368173, 47.675825954575124 ] } },
+{ "type": "Feature", "properties": { "Address": "715 28th Ave E", "City": "Seattle", "State": "WA", "osm_id": "2383889632", "latlong": "47.625601,-122.2967267" }, "geometry": { "type": "Point", "coordinates": [ -122.2967267, 47.625601 ] } },
+{ "type": "Feature", "properties": { "Address": "102 Thomas St", "City": "Middletown", "State": "CT", "osm_id": "17206388", "latlong": "41.5535310889759,-72.6679580498198" }, "geometry": { "type": "Point", "coordinates": [ -72.667958049819802, 41.553531088975902 ] } },
+{ "type": "Feature", "properties": { "Address": "5096 Whately Rd", "City": "S. Deerfield", "State": "MA", "osm_id": "9006049", "latlong": "42.481557,-72.618926" }, "geometry": { "type": "Point", "coordinates": [ -72.618926, 42.481557 ] } },
+{ "type": "Feature", "properties": { "Address": "1120 Commonwealth Ave.", "City": "Boston", "State": "MA", "osm_id": "326399426", "latlong": "42.3514551130098,-71.1260202152757" }, "geometry": { "type": "Point", "coordinates": [ -71.126020215275702, 42.351455113009798 ] } },
+{ "type": "Feature", "properties": { "Address": "4 Crawford St.", "City": "Cambridge", "State": "MA", "osm_id": "29516632", "latlong": "42.371185,-71.1068737066291" }, "geometry": { "type": "Point", "coordinates": [ -71.106873706629102, 42.371185 ] } },
+{ "type": "Feature", "properties": { "Address": "126 North St", "City": "Somerville", "State": "MA", "osm_id": "29518653", "latlong": "42.409895,-71.1288742548568" }, "geometry": { "type": "Point", "coordinates": [ -71.128874254856797, 42.409895 ] } },
+{ "type": "Feature", "properties": { "Address": "6833 Oswego Pl", "City": "Seattle", "State": "WA", "osm_id": null, "latlong": null }, "geometry": { "type": "Point", "coordinates": [ -122.323218810611749, 47.678696079903297 ] } },
+{ "type": "Feature", "properties": { "Address": "461 Warren Wright Rd", "City": "Belchertown", "State": "MA", "osm_id": null, "latlong": null }, "geometry": { "type": "Point", "coordinates": [ -72.466971270022995, 42.340412963607228 ] } }
+]
+}
