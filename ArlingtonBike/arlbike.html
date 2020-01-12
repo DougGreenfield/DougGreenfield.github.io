@@ -20,7 +20,7 @@
        
 L.tileLayer.provider('MapBox', {
     id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoiZG91Z2ciLCJhIjoiY2sybmZwdXRxMDAzODNjbXdnNm8wZDlidCJ9.2dJkAZwUZA1z9_AfqVRIDw',
+    accessToken: 'pk.eyJ1IjoiZG91Z2ciLCJhIjoiNVJjTjlxRSJ9.GCoXzuL5P0ly6jHXTC4NEQ',
     opacity: 0.6
     
 }).addTo(map);
@@ -47,10 +47,10 @@ L.tileLayer.provider('MapBox', {
     style: function (feature) {
         switch(feature.properties.TYPE){
             case "Lane":
-                return {color: "#3471d8", weight: 3};
+                return {color: "#0072B2", weight: 3};
                 break;
             case "Sharrow":
-                return {color: "#34d4d8", weight: 2};
+                return {color: "#56B4E9", weight: 2};
                 break;        
                 
         }
@@ -68,13 +68,13 @@ L.tileLayer.provider('MapBox', {
                 style: function(feature) {
         switch(feature.properties.NAME){
             case "Minuteman Bikeway":
-                return {color: "#07bf40", weight: 5};
+                return {color: "#009E73", weight: 5};
                 break;
             case "Alewife Brook Greenway":
-                return {color: "#07bf40", weight: 4};
+                return {color: "#009E73", weight: 4};
                 break;
             default:
-                return {color: "#7abf6e", weight: 4};
+                return {color: "#009E73", weight: 4};
                 break;        
                 
         }},
@@ -82,9 +82,7 @@ L.tileLayer.provider('MapBox', {
           return feature.properties.FEATTYPE === "Trail";
     },
                
-      }).bindPopup(function (layer) {
-    return layer.feature.properties.NAME;
-}).addTo(map);
+      }).addTo(map);
     })
     
    //Boardwalks   
@@ -96,7 +94,7 @@ L.tileLayer.provider('MapBox', {
                 style: function(feature) {
         switch(feature.properties.NAME){
             case "Alewife Brook Greenway":
-                return {color: "#dfba33", weight: 4};
+                return {color: "#E69F00", weight: 4};  //#F0E442
                 break;       
                 
         }},
@@ -128,7 +126,6 @@ L.tileLayer.provider('MapBox', {
     
    
 });     
-      map.attributionControl.addAttribution("Town of Arlington, GIS Office");
       
     
       
