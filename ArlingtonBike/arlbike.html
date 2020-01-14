@@ -119,6 +119,7 @@ L.tileLayer.provider('MapBox', {
     });
         var marker = L.marker(latlng,{icon: objIcon});
        marker.bindPopup(feature.properties.Name);
+        marker.bindTooltip(feature.properties.Name);  
         return marker;
       }
         
