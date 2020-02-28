@@ -16,7 +16,7 @@
     
     
   <script>
-  var map = L.map('map').setView([38,-100], 5);
+  var map = L.map('map').setView([37,-100], 4);
        
 L.tileLayer.provider('MapBox', {
     id: 'mapbox.light',
@@ -41,7 +41,9 @@ L.tileLayer.provider('MapBox', {
       iconSize: [28,28]
     });
         var marker = L.marker(latlng,{icon: objIcon});
-        marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + feature.properties.Image + ".jpg' width='160px'></image>");
+      //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.STATE_NAME+"</h3><image src='Images/" +               
+        feature.properties.Image + ".jpg' width='160px'></image>");
         return marker;
       }
         
