@@ -163,6 +163,8 @@
 { "type": "Feature", "properties": { "NAME": "Guatemala City", "STATE_NAME": "Guatemala", "STATE_ABBR": "GT", "CityState": "Guatemala, GT", "Image": "guagt" }, "geometry": { "type": "Point", "coordinates": [ -90.516872509311625, 14.623653846194193 ] } },
 { "type": "Feature", "properties": { "NAME": "Buenos Aires", "STATE_NAME": "Argentina", "STATE_ABBR": "AR", "CityState": "Buenos Aires, AR", "Image": "buear" }, "geometry": { "type": "Point", "coordinates": [ -58.406963367164906, -34.630315676710573 ] } },
 { "type": "Feature", "properties": { "NAME": "Porto Alegre", "STATE_NAME": "Brazil", "STATE_ABBR": "BR", "CityState": "Porto Alegre, BR", "Image": "palbr" }, "geometry": { "type": "Point", "coordinates": [ -51.224284001893778, -30.043531204470842 ] } },
-{ "type": "Feature", "properties": { "NAME": "Santiago", "STATE_NAME": "Chile", "STATE_ABBR": "CL", "CityState": "Santiago, CL", "Image": "santiago" }, "geometry": { "type": "Point", "coordinates": [ -70.58314955102378, -33.549139282943983 ] } }
+{ "type": "Feature", "properties": { "NAME": "Santiago", "STATE_NAME": "Chile", "STATE_ABBR": "CL", "CityState": "Santiago, CL", "Image": "santiago" }, "geometry": { "type": "Point", "coordinates": [ -70.58314955102378, -33.549139282943983 ] } },
+{ "type": "Feature", "properties": { "NAME": "Monterrey", "STATE_NAME": "Mexico", "STATE_ABBR": "MX", "CityState": "Monterrey, MX", "Image": "monmx" }, "geometry": { "type": "Point", "coordinates": [ -100.286091966066039, 25.673400377646828 ] } },
+{ "type": "Feature", "properties": { "NAME": "Guadalajara", "STATE_NAME": "Mexico", "STATE_ABBR": "MX", "CityState": "Guadalajara, MX", "Image": "gjamx" }, "geometry": { "type": "Point", "coordinates": [ -103.330168465201467, 20.645853218441253 ] } }
 ]
 }
