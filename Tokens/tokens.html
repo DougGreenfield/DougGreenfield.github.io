@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Transit Tokens of the World</title>
+  <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script> 
+    <script src="leaflet-providers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+      #map{ height: 100%}
+  </style>
+</head>
+<body>
+<div id="header" style="position:absolute;z-index:10;margin-left:60px;margin-top:2px;background-color:#eee;padding:4px;opacity:0.5;"><span><b><font size="26">Transit Tokens of the World&nbsp;</font></b></span><br/></div>
+<div id="map" style="z-index:0;"></div>
+    
+    
+  <script>
+  var map = L.map('map').setView([38,-100], 5);
+       
+L.tileLayer.provider('MapBox', {
+    id: 'mapbox.light',
+   accessToken: 'pk.eyJ1IjoiZG91Z2ciLCJhIjoiNVJjTjlxRSJ9.GCoXzuL5P0ly6jHXTC4NEQ',
+    opacity: 0.6
+    
+}).addTo(map);
+      
+      
+    
+ 
+      
+ $.getJSON("https://raw.githubusercontent.com/DougGreenfield/DougGreenfield.github.io/master/Tokens/Cities.geojson",function(data){
+//L.geoJson function is used to parse geojson file and load on to map
+   
+     L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+       
+	      var objIcon = L.icon({
+      iconUrl: 'images/png/' + feature.properties.Image + '.png',
+         //     iconUrl: 'images/png/acorn.svg',
+      iconSize: [28,28]
+    });
+        var marker = L.marker(latlng,{icon: objIcon});
+        marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + feature.properties.Image + ".jpg' width='160px'></image>");
+        return marker;
+      }
+        
+    }).addTo(map);   
+   
+});     
+      
+    
+      
+  </script>
+      
+ </body>
+</html>
