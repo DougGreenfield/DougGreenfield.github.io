@@ -165,6 +165,12 @@
 { "type": "Feature", "properties": { "NAME": "Porto Alegre", "STATE_NAME": "Brazil", "STATE_ABBR": "BR", "CityState": "Porto Alegre, BR", "Image": "palbr" }, "geometry": { "type": "Point", "coordinates": [ -51.224284001893778, -30.043531204470842 ] } },
 { "type": "Feature", "properties": { "NAME": "Santiago", "STATE_NAME": "Chile", "STATE_ABBR": "CL", "CityState": "Santiago, CL", "Image": "santiago" }, "geometry": { "type": "Point", "coordinates": [ -70.58314955102378, -33.549139282943983 ] } },
 { "type": "Feature", "properties": { "NAME": "Monterrey", "STATE_NAME": "Mexico", "STATE_ABBR": "MX", "CityState": "Monterrey, MX", "Image": "monmx" }, "geometry": { "type": "Point", "coordinates": [ -100.286091966066039, 25.673400377646828 ] } },
-{ "type": "Feature", "properties": { "NAME": "Guadalajara", "STATE_NAME": "Mexico", "STATE_ABBR": "MX", "CityState": "Guadalajara, MX", "Image": "gjamx" }, "geometry": { "type": "Point", "coordinates": [ -103.330168465201467, 20.645853218441253 ] } }
+{ "type": "Feature", "properties": { "NAME": "Guadalajara", "STATE_NAME": "Mexico", "STATE_ABBR": "MX", "CityState": "Guadalajara, MX", "Image": "gjamx" }, "geometry": { "type": "Point", "coordinates": [ -103.330168465201467, 20.645853218441253 ] } },
+{ "type": "Feature", "properties": { "NAME": "Cleveland", "STATE_NAME": "Ohio", "STATE_ABBR": "OH", "CityState": "Cleveland, OH", "Image": "cle" }, "geometry": { "type": "Point", "coordinates": [ -81.710725235169903, 41.504311874111551 ] } },
+{ "type": "Feature", "properties": { "NAME": "Baku", "STATE_NAME": "Azerbaijan", "STATE_ABBR": "AZ", "CityState": "Baku, AZ", "Image": "baku" }, "geometry": { "type": "Point", "coordinates": [ 49.847160145145814, 40.402210407376195 ] } },
+{ "type": "Feature", "properties": { "NAME": "Dnipro", "STATE_NAME": "Ukraine", "STATE_ABBR": "UA", "CityState": "Dnipro, UA", "Image": "dnukr" }, "geometry": { "type": "Point", "coordinates": [ 35.041319631076739, 48.482571517646754 ] } },
+{ "type": "Feature", "properties": { "NAME": "Kharkiv", "STATE_NAME": "Ukraine", "STATE_ABBR": "UA", "CityState": "Kharkiv, UA", "Image": "khukr" }, "geometry": { "type": "Point", "coordinates": [ 36.249755317877181, 49.993116126147306 ] } },
+{ "type": "Feature", "properties": { "NAME": "Samara", "STATE_NAME": "Russia", "STATE_ABBR": "RU", "CityState": "Samara, RU", "Image": "samara" }, "geometry": { "type": "Point", "coordinates": [ 50.114603911061089, 53.199251464394827 ] } },
+{ "type": "Feature", "properties": { "NAME": "Minsk", "STATE_NAME": "Belarus", "STATE_ABBR": "BY", "CityState": "Minsk, BY", "Image": "minsk" }, "geometry": { "type": "Point", "coordinates": [ 27.56047655163287, 53.899684412221063 ] } }
 ]
 }

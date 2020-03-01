@@ -18,10 +18,10 @@
   <script>
   var map = L.map('map').setView([37,-100], 4);
        
-L.tileLayer.provider('MapBox', {
-    id: 'mapbox.light',
-   accessToken: 'pk.eyJ1IjoiZG91Z2ciLCJhIjoiNVJjTjlxRSJ9.GCoXzuL5P0ly6jHXTC4NEQ',
-    opacity: 0.6
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+    opacity: 0.7
     
 }).addTo(map);
       
