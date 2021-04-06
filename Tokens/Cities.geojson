@@ -170,6 +170,12 @@
 { "type": "Feature", "properties": { "NAME": "Dnipro", "STATE_NAME": "Ukraine", "STATE_ABBR": "UA", "CityState": "Dnipro, UA", "Image": "dnukr" }, "geometry": { "type": "Point", "coordinates": [ 35.041319631076739, 48.482571517646754 ] } },
 { "type": "Feature", "properties": { "NAME": "Kharkiv", "STATE_NAME": "Ukraine", "STATE_ABBR": "UA", "CityState": "Kharkiv, UA", "Image": "khukr" }, "geometry": { "type": "Point", "coordinates": [ 36.249755317877181, 49.993116126147306 ] } },
 { "type": "Feature", "properties": { "NAME": "Samara", "STATE_NAME": "Russia", "STATE_ABBR": "RU", "CityState": "Samara, RU", "Image": "samara" }, "geometry": { "type": "Point", "coordinates": [ 50.114603911061089, 53.199251464394827 ] } },
-{ "type": "Feature", "properties": { "NAME": "Minsk", "STATE_NAME": "Belarus", "STATE_ABBR": "BY", "CityState": "Minsk, BY", "Image": "minsk" }, "geometry": { "type": "Point", "coordinates": [ 27.56047655163287, 53.899684412221063 ] } }
+{ "type": "Feature", "properties": { "NAME": "Minsk", "STATE_NAME": "Belarus", "STATE_ABBR": "BY", "CityState": "Minsk, BY", "Image": "minsk" }, "geometry": { "type": "Point", "coordinates": [ 27.56047655163287, 53.899684412221063 ] } },
+{ "type": "Feature", "properties": { "NAME": "Springfield", "STATE_NAME": "Massachusetts", "STATE_ABBR": "MA", "CityState": "Springfield, MA", "Image": "hfd" }, "geometry": { "type": "Point", "coordinates": [ -72.596780255381489, 42.107046607550672 ] } },
+{ "type": "Feature", "properties": { "NAME": "Cairo", "STATE_NAME": "Egypt", "STATE_ABBR": null, "CityState": "Cairo,  Egypt", "Image": "cairo" }, "geometry": { "type": "Point", "coordinates": [ 31.2469245153817, 30.038973118608894 ] } },
+{ "type": "Feature", "properties": { "NAME": "Busan", "STATE_NAME": "South Korea", "STATE_ABBR": null, "CityState": "Busan,  South Korea", "Image": "busan" }, "geometry": { "type": "Point", "coordinates": [ 129.096312590808679, 35.158937505432725 ] } },
+{ "type": "Feature", "properties": { "NAME": "Columbia", "STATE_NAME": "South Carolina", "STATE_ABBR": "SC", "CityState": "Columbia,  South Carolina", "Image": "cos" }, "geometry": { "type": "Point", "coordinates": [ -81.018020925794801, 34.007878254979161 ] } },
+{ "type": "Feature", "properties": { "NAME": "Charlotte", "STATE_NAME": "North Carolina", "STATE_ABBR": null, "CityState": "Charlotte,  North Carolina", "Image": "cnc" }, "geometry": { "type": "Point", "coordinates": [ -80.833334344513304, 35.219422228185827 ] } },
+{ "type": "Feature", "properties": { "NAME": "Gastonia", "STATE_NAME": "North Carolina", "STATE_ABBR": null, "CityState": "Gastonia, North Carolina", "Image": "gnc" }, "geometry": { "type": "Point", "coordinates": [ -81.184710458197543, 35.262227096634724 ] } }
 ]
 }
