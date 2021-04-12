@@ -177,6 +177,7 @@
 { "type": "Feature", "properties": { "NAME": "Columbia", "STATE_NAME": "South Carolina", "STATE_ABBR": "SC", "CityState": "Columbia,  South Carolina", "Image": "cos" }, "geometry": { "type": "Point", "coordinates": [ -81.018020925794801, 34.007878254979161 ] } },
 { "type": "Feature", "properties": { "NAME": "Charlotte", "STATE_NAME": "North Carolina", "STATE_ABBR": null, "CityState": "Charlotte,  North Carolina", "Image": "cnc" }, "geometry": { "type": "Point", "coordinates": [ -80.833334344513304, 35.219422228185827 ] } },
 { "type": "Feature", "properties": { "NAME": "Gastonia", "STATE_NAME": "North Carolina", "STATE_ABBR": null, "CityState": "Gastonia, North Carolina", "Image": "gnc" }, "geometry": { "type": "Point", "coordinates": [ -81.184710458197543, 35.262227096634724 ] } },
-{ "type": "Feature", "properties": { "NAME": "Hyannis", "STATE_NAME": "Massachusetts", "STATE_ABBR": "MA", "CityState": "Cape Cod,  Massachusetts", "Image": "capecod" }, "geometry": { "type": "Point", "coordinates": [ -70.283414235034883, 41.660485869055748 ] } }
+{ "type": "Feature", "properties": { "NAME": "Hyannis", "STATE_NAME": "Massachusetts", "STATE_ABBR": "MA", "CityState": "Cape Cod,  Massachusetts", "Image": "capecod" }, "geometry": { "type": "Point", "coordinates": [ -70.283414235034883, 41.660485869055748 ] } },
+{ "type": "Feature", "properties": { "NAME": "Metro DC", "STATE_NAME": null, "STATE_ABBR": null, "CityState": null, "Image": "metdc" }, "geometry": { "type": "Point", "coordinates": [ -77.093874690424755, 39.054371829092233 ] } }
 ]
 }
