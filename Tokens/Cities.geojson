@@ -190,6 +190,11 @@
 { "type": "Feature", "properties": { "NAME": "Kayseri", "STATE_NAME": "Turkey", "STATE_ABBR": "TR", "CityState": "Kayseri, TR", "Image": "kayseri" }, "geometry": { "type": "Point", "coordinates": [ 35.485080950171032, 38.721974270977469 ] } },
 { "type": "Feature", "properties": { "NAME": "Dublin", "STATE_NAME": "Ireland", "STATE_ABBR": "IR", "CityState": "Dublin,  IR", "Image": "dublin" }, "geometry": { "type": "Point", "coordinates": [ -6.275928153938827, 53.342549638375914 ] } },
 { "type": "Feature", "properties": { "NAME": "Limoges", "STATE_NAME": "France", "STATE_ABBR": "FR", "CityState": "Limoges,  FR", "Image": "limoges" }, "geometry": { "type": "Point", "coordinates": [ 1.273877913031161, 45.833158956329314 ] } },
-{ "type": "Feature", "properties": { "NAME": "Sandusky", "STATE_NAME": "Ohio", "STATE_ABBR": "OH", "CityState": "Sandusky,  OH", "Image": "sanduskyo" }, "geometry": { "type": "Point", "coordinates": [ -82.710912474449003, 41.455928100308256 ] } }
+{ "type": "Feature", "properties": { "NAME": "Sandusky", "STATE_NAME": "Ohio", "STATE_ABBR": "OH", "CityState": "Sandusky,  OH", "Image": "sanduskyo" }, "geometry": { "type": "Point", "coordinates": [ -82.710912474449003, 41.455928100308256 ] } },
+{ "type": "Feature", "properties": { "NAME": "Caxias Do Sul", "STATE_NAME": "Brazil", "STATE_ABBR": "BR", "CityState": "Caxias Do Sul,  BR", "Image": "caxiasdosul" }, "geometry": { "type": "Point", "coordinates": [ -51.178615431454503, -29.166038431944518 ] } },
+{ "type": "Feature", "properties": { "NAME": "Curitiba", "STATE_NAME": "Brazil", "STATE_ABBR": "BR", "CityState": "Curitiba, BR", "Image": "curitiba" }, "geometry": { "type": "Point", "coordinates": [ -49.271719388121113, -25.429177202536756 ] } },
+{ "type": "Feature", "properties": { "NAME": "Santiago De Cuba", "STATE_NAME": "Cuba", "STATE_ABBR": "CU", "CityState": "Santiago De Cuba,  CU", "Image": "santiagocuba" }, "geometry": { "type": "Point", "coordinates": [ -75.828879549719915, 20.022283943241856 ] } },
+{ "type": "Feature", "properties": { "NAME": "Parkersburg", "STATE_NAME": "West Virginia", "STATE_ABBR": "WV", "CityState": "Parkersburg, WV", "Image": "pwv" }, "geometry": { "type": "Point", "coordinates": [ -81.557088653558296, 39.269751440138613 ] } },
+{ "type": "Feature", "properties": { "NAME": "San Jose", "STATE_NAME": "California", "STATE_ABBR": "CA", "CityState": "San Jose, CA", "Image": "sjca" }, "geometry": { "type": "Point", "coordinates": [ -121.89424337999732, 37.332677542617226 ] } }
 ]
 }
