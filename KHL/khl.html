@@ -1,0 +1,114 @@
+<html>
+<head>
+  <title>Transit Tokens of the World</title>
+  <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script> 
+    <script src="leaflet-providers.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+      #map{ height: 100%}
+  </style>
+</head>
+<body>
+<div id="header" style="position:absolute;z-index:10;margin-left:60px;margin-top:2px;background-color:#eee;padding:4px;opacity:0.5;"><span><b><font size="26">Kontinental Hockey League&nbsp;</font></b></span><br/></div>
+<div id="map" style="z-index:0;"></div>
+    
+    
+  <script>
+  var map = L.map('map').setView([42,100], 4);
+       
+L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>',
+	subdomains: 'abcd',
+    opacity: 0.7
+    
+}).addTo(map);
+      
+      
+    
+ 
+      
+ $.getJSON("https://raw.githubusercontent.com/DougGreenfield/DougGreenfield.github.io/master/KHL/KHL.geojson",function(data){
+//L.geoJson function is used to parse geojson file and load on to map
+   
+ var mLyr1 = L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+       
+	      var objIcon = L.icon({
+      iconUrl: 'Logos/' + feature.properties.icon + '.png',
+         //     iconUrl: 'images/png/acorn.svg',
+      iconSize: [28,28]
+    });
+        var marker = L.marker(latlng,{icon: objIcon});
+      //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
+        feature.properties.icon + ".png' width='160px'></image>");
+        return marker;
+      }
+        
+    }).addTo(map);   
+     
+    var mLyr2 = L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+       
+	      var objIcon = L.icon({
+      iconUrl: 'Logos/' + feature.properties.icon + '.png',
+      iconSize: [65,65]
+    });
+        var marker = L.marker(latlng,{icon: objIcon});
+      //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
+        feature.properties.Image + ".png' width='160px'></image>");
+        return marker;
+      }
+        
+    }); 
+     
+        var mLyr3 = L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+       
+	      var objIcon = L.icon({
+      iconUrl: 'Logos/' + feature.properties.icon + '.png',
+      iconSize: [140,140]
+    });
+        var marker = L.marker(latlng,{icon: objIcon});
+      //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
+        feature.properties.Image + ".png' width='160px'></image>");
+        return marker;
+      }
+        
+    }); 
+    
+     map.on('zoomend', function() {
+            var currentZoom = map.getZoom(); 
+            if (currentZoom >= 6 && currentZoom <= 8 ) {               
+                map.removeLayer(mLyr1);
+                map.addLayer(mLyr2);
+                if(map.hasLayer(mLyr3)){
+                 map.removeLayer(mLyr3);    
+                }
+                   
+                
+            }
+         else if (currentZoom > 8) {               
+                map.removeLayer(mLyr2);
+                map.addLayer(mLyr3);
+            }
+         
+         else if (currentZoom < 6){               
+                map.removeLayer(mLyr2);
+             map.removeLayer(mLyr3);
+                map.addLayer(mLyr1);
+            }
+   
+}); 
+ })   
+      
+    
+      
+  </script>
+      
+ </body>
+</html>

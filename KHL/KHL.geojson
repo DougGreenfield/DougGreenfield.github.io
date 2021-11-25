@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "KHL",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Dinamo Riga", "description": null, "icon": "Dinamo_Riga.png", "Location": "Riga, Latvia" }, "geometry": { "type": "Point", "coordinates": [ 24.121106, 56.967954 ] } },
+{ "type": "Feature", "properties": { "Name": "Dinamo Moscow", "description": null, "icon": "Dinamo_Moscow.png", "Location": "Moscow,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 37.547536, 55.72247 ] } },
+{ "type": "Feature", "properties": { "Name": "Jokerit Helsinki", "description": null, "icon": "Jokerit_Helsinki.png", "Location": "Helsinki,  Finland" }, "geometry": { "type": "Point", "coordinates": [ 24.929094, 60.205838 ] } },
+{ "type": "Feature", "properties": { "Name": "Severstal Cherepovets", "description": null, "icon": "Severstal_Cherepovets.png", "Location": "Cherepovets,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 37.903218, 59.124532 ] } },
+{ "type": "Feature", "properties": { "Name": "SKA St. Petersburg", "description": null, "icon": "SKA.png", "Location": "St. Petersburg  Russia" }, "geometry": { "type": "Point", "coordinates": [ 30.467749, 59.921388 ] } },
+{ "type": "Feature", "properties": { "Name": "Spartak Moscow", "description": null, "icon": "Spartak_Moscow.png", "Location": "Moscow,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 37.6715976, 55.7930593 ] } },
+{ "type": "Feature", "properties": { "Name": "Admiral Vladivostok", "description": null, "icon": "Admiral_Vladivostok.png", "Location": "Vladivostok,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 131.897392, 43.118027 ] } },
+{ "type": "Feature", "properties": { "Name": "Amur Khabarovsk", "description": null, "icon": "Amur_Khabarovsk.png", "Location": "Khabarovsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 135.086362, 48.484254 ] } },
+{ "type": "Feature", "properties": { "Name": "Avangard Omsk Oblast", "description": null, "icon": "Avangard_Omsk_Oblast.png", "Location": "Omsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 73.29782, 55.008856 ] } },
+{ "type": "Feature", "properties": { "Name": "Barys Nur-Sultan", "description": null, "icon": "Barys_Astana.png", "Location": "Nur-Sultan,  Kazakhstan" }, "geometry": { "type": "Point", "coordinates": [ 71.464863, 51.155824 ] } },
+{ "type": "Feature", "properties": { "Name": "Salavat Yulaev Ufa", "description": null, "icon": "Salavat_Yulaev_Ufa.png", "Location": "Ufa,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 55.957317, 54.739475 ] } },
+{ "type": "Feature", "properties": { "Name": "Kunlun Red Star", "description": null, "icon": "Kunlun_Red_Star.png", "Location": "Beijing, China" }, "geometry": { "type": "Point", "coordinates": [ 116.2807506, 39.911127 ] } },
+{ "type": "Feature", "properties": { "Name": "Ak Bars Kazan", "description": null, "icon": "Ak_Bars_Kazan.png", "Location": "Kazan,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 49.124508, 55.817391 ] } },
+{ "type": "Feature", "properties": { "Name": "Avtomobilist Yekaterinburg", "description": null, "icon": "Avtomobilist_Yekaterinburg.png", "Location": "Yekaterinburg,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 60.59402, 56.817277 ] } },
+{ "type": "Feature", "properties": { "Name": "Metallurg Magnitogorsk", "description": null, "icon": "Metallurg_Magnitogorsk.png", "Location": "Magnitogorsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 58.992312, 53.381588 ] } },
+{ "type": "Feature", "properties": { "Name": "Neftekhimik Nizhnekamsk", "description": null, "icon": "Neftekhimik_Nizhnekamsk.png", "Location": "Nizhnekamsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 51.799475, 55.631612 ] } },
+{ "type": "Feature", "properties": { "Name": "Sibir Novosobirsk", "description": null, "icon": "Sibir_Novosibirsk.png", "Location": "Novosibirsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 82.943258, 55.07139 ] } },
+{ "type": "Feature", "properties": { "Name": "Traktor Chelyabinsk", "description": null, "icon": "Traktor_Chelyabinsk.png", "Location": "Chelyabinsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 61.287092, 55.174861 ] } },
+{ "type": "Feature", "properties": { "Name": "CSKA Moscow", "description": null, "icon": "CSKA_Moscow.png", "Location": "Moscow,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 37.542729, 55.789098 ] } },
+{ "type": "Feature", "properties": { "Name": "Dinamo Minsk", "description": null, "icon": "Dinamo_Minsk.png", "Location": "Minsk,  Belarus" }, "geometry": { "type": "Point", "coordinates": [ 27.481527, 53.936056 ] } },
+{ "type": "Feature", "properties": { "Name": "Lokomotiv Yaroslavl", "description": null, "icon": "Lokomotiv_Yaroslavl.png", "Location": "Yaroslavl,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 39.848528, 57.589227 ] } },
+{ "type": "Feature", "properties": { "Name": "HC Sochi", "description": null, "icon": "Sochi.png", "Location": "Sochi,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 39.950055, 43.404595 ] } },
+{ "type": "Feature", "properties": { "Name": "Torpedo Nizhny Novgorod", "description": null, "icon": "TorpedoNizhny.png", "Location": "Nizhny Novgorod,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 43.97913, 56.292204 ] } },
+{ "type": "Feature", "properties": { "Name": "Vityaz Moscow Oblast", "description": null, "icon": "Vityaz_Chekhov.png", "Location": "Podolsk,  Russia" }, "geometry": { "type": "Point", "coordinates": [ 37.516176, 55.420149 ] } }
+]
+}
