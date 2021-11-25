@@ -42,8 +42,7 @@ L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapSe
     });
         var marker = L.marker(latlng,{icon: objIcon});
       //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
-         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
-        feature.properties.Image + ".png' width='160px'></image>");
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" + feature.properties.icon + "width='160px'></image>");
         return marker;
       }
         
@@ -58,8 +57,7 @@ L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapSe
     });
         var marker = L.marker(latlng,{icon: objIcon});
       //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
-         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
-        feature.properties.Image + ".png' width='160px'></image>");
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" + feature.properties.icon + "width='160px'></image>");
         return marker;
       }
         
@@ -74,8 +72,7 @@ L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapSe
     });
         var marker = L.marker(latlng,{icon: objIcon});
       //  marker.bindPopup("<h3>" + feature.properties.CityState+"</h3><image src='Images/" + 
-         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" +               
-        feature.properties.Image + ".png' width='160px'></image>");
+         marker.bindPopup("<h3>" + feature.properties.NAME + ", " + feature.properties.Description+"</h3><image src='Logos/" + feature.properties.icon + "width='160px'></image>");
         return marker;
       }
         
