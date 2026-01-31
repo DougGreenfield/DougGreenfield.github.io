@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Map with GeoJSON</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .sidebar {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        #map {
+            flex: 1;
+            height: 100%;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            font-size: 1.8rem;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin: 20px 0 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .btn-success {
+            background: #2ecc71;
+            margin-top: 5px;
+        }
+        
+        .btn-success:hover {
+            background: #27ae60;
+        }
+        
+        .points-list {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .point-item {
+            background: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            cursor: pointer;
+        }
+        
+        .point-item:hover {
+            background: #eef5ff;
+        }
+        
+        .point-item h4 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .point-item p {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .instructions {
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .instructions h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 5px;
+        }
+        
+        .map-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #3498db;
+        }
+        
+        .control-btn:hover {
+            background: #f8f9fa;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2000;
+            border-left: 5px solid #3498db;
+            display: none;
+        }
+        
+        .notification.show {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: 40vh;
+            }
+            #map {
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1><i class="fas fa-map-marker-alt"></i> Community Map</h1>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> How to add a point:</h3>
+                <ol>
+                    <li>Fill out the form below</li>
+                    <li>Click on the map to select location</li>
+                    <li>Click "Add Point to Map"</li>
+                    <li>GeoJSON updates automatically!</li>
+                </ol>
+            </div>
+            
+            <form id="userForm">
+                <h2><i class="fas fa-user"></i> Your Information</h2>
+                
+                <div class="form-group">
+                    <label for="userName">Full Name *</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userEmail">Email Address *</label>
+                    <input type="email" id="userEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userInterest">Field of Interest *</label>
+                    <select id="userInterest" required>
+                        <option value="">Select your interest</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Science">Science</option>
+                        <option value="Arts">Arts & Culture</option>
+                        <option value="Business">Business</option>
+                        <option value="Education">Education</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="userWebsite">Website/Portfolio URL</label>
+                    <input type="url" id="userWebsite" placeholder="https://example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="userDescription">Description</label>
+                    <textarea id="userDescription" placeholder="Tell us about yourself..." rows="3"></textarea>
+                </div>
+                
+                <button type="submit" id="addPointBtn" disabled>
+                    <i class="fas fa-map-marker-alt"></i> Click map first to select location
+                </button>
+                
+                <button type="button" class="btn-success" id="exportBtn">
+                    <i class="fas fa-download"></i> Export GeoJSON
+                </button>
+                
+                <button type="button" class="btn-danger" id="clearBtn">
+                    <i class="fas fa-trash"></i> Clear All Points
+                </button>
+            </form>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number" id="pointCount">0</div>
+                    <div class="stat-label">Points</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="lastUpdate">-</div>
+                    <div class="stat-label">Last Update</div>
+                </div>
+            </div>
+            
+            <h2><i class="fas fa-users"></i> Community Points</h2>
+            <div class="points-list" id="pointsList">
+                <!-- Points will appear here -->
+            </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div class="map-controls">
+            <button class="control-btn" id="locateBtn" title="Find my location">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+            <button class="control-btn" id="resetBtn" title="Reset view">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
+        
+        <div class="notification" id="notification">
+            <div id="notificationMessage">Point added successfully!</div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the map with OpenStreetMap tiles
+        const map = L.map('map').setView([20, 0], 2);
+        
+        // Add OpenStreetMap tiles (will definitely work)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        }).addTo(map);
+        
+        // Initialize GeoJSON data
+        let geoJsonData = {
+            type: "FeatureCollection",
+            features: []
+        };
+        
+        // Store points in memory
+        let points = [];
+        let selectedLocation = null;
+        let tempMarker = null;
+        
+        // Load saved data
+        function loadData() {
+            const saved = localStorage.getItem('communityGeoJSON');
+            if (saved) {
+                try {
+                    geoJsonData = JSON.parse(saved);
+                    points = geoJsonData.features.map(f => ({
+                        id: f.properties.id,
+                        name: f.properties.name,
+                        email: f.properties.email,
+                        interest: f.properties.interest,
+                        website: f.properties.website,
+                        description: f.properties.description,
+                        lat: f.geometry.coordinates[1],
+                        lng: f.geometry.coordinates[0],
+                        timestamp: f.properties.timestamp
+                    }));
+                    
+                    // Add markers to map
+                    points.forEach(addMarkerToMap);
+                    updateUI();
+                    showNotification(`Loaded ${points.length} points from storage`);
+                } catch (e) {
+                    console.error('Error loading data:', e);
+                }
+            }
+        }
+        
+        // Add marker to map
+        function addMarkerToMap(point) {
+            const colors = {
+                'Technology': '#3498db',
+                'Science': '#9b59b6',
+                'Arts': '#e74c3c',
+                'Business': '#2ecc71',
+                'Education': '#f1c40f',
+                'Healthcare': '#e67e22',
+                'Environment': '#1abc9c',
+                'Sports': '#e84393',
+                'Other': '#7f8c8d'
+            };
+            
+            const color = colors[point.interest] || '#3498db';
+            
+            const marker = L.circleMarker([point.lat, point.lng], {
+                color: color,
+                fillColor: color,
+                fillOpacity: 0.7,
+                radius: 8,
+                weight: 2
+            }).addTo(map);
+            
+            // Create popup content
+            const popupContent = `
+                <div style="min-width: 200px;">
+                    <h3 style="margin: 0 0 10px 0; color: ${color};">${point.name}</h3>
+                    <p><strong>Email:</strong> ${point.email}</p>
+                    <p><strong>Interest:</strong> ${point.interest}</p>
+                    ${point.website ? `<p><strong>Website:</strong> <a href="${point.website}" target="_blank">${point.website}</a></p>` : ''}
+                    ${point.description ? `<p><strong>Description:</strong> ${point.description}</p>` : ''}
+                    <hr>
+                    <small>Added: ${new Date(point.timestamp).toLocaleDateString()}</small>
+                    <br>
+                    <button onclick="removePoint('${point.id}')" style="background: ${color}; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-top: 10px;">
+                        Remove Point
+                    </button>
+                </div>
+            `;
+            
+            marker.bindPopup(popupContent);
+            
+            // Store point reference in marker
+            marker.pointId = point.id;
+            
+            return marker;
+        }
+        
+        // Update GeoJSON data
+        function updateGeoJSON() {
+            // Convert points to GeoJSON features
+            geoJsonData.features = points.map(point => ({
+                type: "Feature",
+                geometry: {
+                    type: "Point",
+                    coordinates: [point.lng, point.lat]
+                },
+                properties: {
+                    id: point.id,
+                    name: point.name,
+                    email: point.email,
+                    interest: point.interest,
+                    website: point.website || '',
+                    description: point.description || '',
+                    timestamp: point.timestamp
+                }
+            }));
+            
+            // Save to localStorage
+            localStorage.setItem('communityGeoJSON', JSON.stringify(geoJsonData));
+            
+            // Update UI
+            updateUI();
+        }
+        
+        // Update UI elements
+        function updateUI() {
+            // Update point count
+            document.getElementById('pointCount').textContent = points.length;
+            
+            // Update last update time
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = 
+                now.getHours().toString().padStart(2, '0') + ':' + 
+                now.getMinutes().toString().padStart(2, '0');
+            
+            // Update points list
+            const pointsList = document.getElementById('pointsList');
+            if (points.length === 0) {
+                pointsList.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px;">No points yet. Add the first one!</p>';
+                return;
+            }
+            
+            // Sort by most recent
+            const sortedPoints = [...points].sort((a, b) => b.timestamp - a.timestamp);
+            
+            pointsList.innerHTML = sortedPoints.map(point => `
+                <div class="point-item" onclick="zoomToPoint('${point.id}')">
+                    <h4>${point.name}</h4>
+                    <p><i class="fas fa-star"></i> ${point.interest}</p>
+                    <p><i class="fas fa-envelope"></i> ${point.email}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ${point.lat.toFixed(2)}, ${point.lng.toFixed(2)}</p>
+                </div>
+            `).join('');
+        }
+        
+        // Generate ID
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+        
+        // Show notification
+        function showNotification(message, duration = 3000) {
+            const notification = document.getElementById('notification');
+            document.getElementById('notificationMessage').textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, duration);
+        }
+        
+        // Handle map clicks
+        map.on('click', function(e) {
+            selectedLocation = [e.latlng.lat, e.latlng.lng];
+            
+            // Remove previous temp marker
+            if (tempMarker) {
+                map.removeLayer(tempMarker);
+            }
+            
+            // Add new temp marker
+            tempMarker = L.circleMarker([e.latlng.lat, e.latlng.lng], {
+                color: '#3498db',
+                fillColor: '#3498db',
+                fillOpacity: 0.5,
+                radius: 10,
+                weight: 3
+            }).addTo(map);
+            
+            // Update button text
+            const btn = document.getElementById('addPointBtn');
+            btn.innerHTML = '<i class="fas fa-map-marker-alt"></i> Add Point to Map';
+            btn.disabled = false;
+            
+            // Show popup with coordinates
+            tempMarker.bindPopup(`Selected location:<br>${e.latlng.lat.toFixed(4)}, ${e.latlng.lng.toFixed(4)}`).openPopup();
+        });
+        
+        // Handle form submission
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!selectedLocation) {
+                showNotification('Please click on the map to select a location first!');
+                return;
+            }
+            
+            // Get form values
+            const name = document.getElementById('userName').value;
+            const email = document.getElementById('userEmail').value;
+            const interest = document.getElementById('userInterest').value;
+            const website = document.getElementById('userWebsite').value;
+            const description = document.getElementById('userDescription').value;
+            
+            // Create point object
+            const point = {
+                id: generateId(),
+                name: name,
+                email: email,
+                interest: interest,
+                website: website || null,
+                description: description || null,
+                lat: selectedLocation[0],
+                lng: selectedLocation[1],
+                timestamp: Date.now()
+            };
+            
+            // Add to points array
+            points.push(point);
+            
+            // Add marker to map
+            addMarkerToMap(point);
+            
+            // Update GeoJSON
+            updateGeoJSON();
+            
+            // Reset form
+            document.getElementById('userForm').reset();
+            
+            // Remove temp marker
+            if (tempMarker) {
+                map.removeLayer(tempMarker);
+                tempMarker = null;
+            }
+            
+            // Reset button
+            const btn = document.getElementById('addPointBtn');
+            btn.innerHTML = '<i class="fas fa-map-marker-alt"></i> Click map first to select location';
+            btn.disabled = true;
+            
+            // Zoom to new point
+            map.setView([point.lat, point.lng], 8);
+            
+            // Show success message
+            showNotification(`Added point for ${name}! GeoJSON updated.`);
+        });
+        
+        // Export GeoJSON
+        document.getElementById('exportBtn').addEventListener('click', function() {
+            const dataStr = JSON.stringify(geoJsonData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `community_points_${new Date().toISOString().slice(0,10)}.geojson`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+            
+            showNotification('GeoJSON file downloaded!');
+        });
+        
+        // Clear all points
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            if (points.length === 0) {
+                showNotification('No points to clear!');
+                return;
+            }
+            
+            if (confirm(`Are you sure you want to remove all ${points.length} points?`)) {
+                // Clear all markers from map
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.CircleMarker) {
+                        map.removeLayer(layer);
+                    }
+                });
+                
+                // Clear data
+                points = [];
+                geoJsonData.features = [];
+                localStorage.removeItem('communityGeoJSON');
+                
+                // Update UI
+                updateUI();
+                
+                showNotification('All points cleared!');
+            }
+        });
+        
+        // Zoom to point
+        window.zoomToPoint = function(pointId) {
+            const point = points.find(p => p.id === pointId);
+            if (point) {
+                map.setView([point.lat, point.lng], 10);
+                // Try to open popup
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.CircleMarker && layer.pointId === pointId) {
+                        layer.openPopup();
+                    }
+                });
+            }
+        };
+        
+        // Remove point
+        window.removePoint = function(pointId) {
+            if (confirm('Remove this point?')) {
+                // Remove from points array
+                points = points.filter(p => p.id !== pointId);
+                
+                // Remove marker from map
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.CircleMarker && layer.pointId === pointId) {
+                        map.removeLayer(layer);
+                    }
+                });
+                
+                // Update GeoJSON
+                updateGeoJSON();
+                
+                showNotification('Point removed!');
+            }
+        };
+        
+        // Find location button
+        document.getElementById('locateBtn').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    map.setView([position.coords.latitude, position.coords.longitude], 12);
+                    L.marker([position.coords.latitude, position.coords.longitude])
+                        .addTo(map)
+                        .bindPopup('Your location')
+                        .openPopup();
+                });
+            }
+        });
+        
+        // Reset view button
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            map.setView([20, 0], 2);
+        });
+        
+        // Add some sample points on first load
+        function addSamplePoints() {
+            if (points.length > 0) return;
+            
+            const samples = [
+                {
+                    name: "Alex Johnson",
+                    email: "alex@example.com",
+                    interest: "Technology",
+                    website: "https://example.com",
+                    description: "Software developer",
+                    lat: 40.7128,
+                    lng: -74.0060
+                },
+                {
+                    name: "Maria Garcia",
+                    email: "maria@example.com",
+                    interest: "Environment",
+                    website: "https://example.com",
+                    description: "Environmental scientist",
+                    lat: 51.5074,
+                    lng: -0.1278
+                }
+            ];
+            
+            samples.forEach(sample => {
+                const point = {
+                    id: generateId(),
+                    ...sample,
+                    timestamp: Date.now()
+                };
+                points.push(point);
+                addMarkerToMap(point);
+            });
+            
+            updateGeoJSON();
+            showNotification('Sample points added!');
+        }
+        
+        // Initialize the application
+        loadData();
+        
+        // Add sample points if no data exists
+        if (points.length === 0) {
+            addSamplePoints();
+        }
+    </script>
+</body>
+</html>
